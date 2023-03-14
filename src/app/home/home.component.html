@@ -29,7 +29,7 @@
             <e-column headerText="Remarks" field="remarks" width="150"></e-column>
             <e-column headerText="Telrad" width="80">
                 <ng-template #template let-data>
-                    <div class="msr-centered msr-hover" (click)="openWindow('https://avila.star-shine.ch/astro/messiercharts/m'+data.id.substring(1).padStart(3,'0'))">
+                    <div class="msr-centered msr-hover" (click)="openWindow('https://avila.star-shine.ch/astro/messiercharts/m'+data.id.substring(1).padStart(3,'0')+'.htm')">
                         <i class="fas fa-external-link-alt"></i>
                     </div>
                 </ng-template>
