@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { FilterService, GridModule, ResizeService, SortService } from '@syncfusion/ej2-angular-grids';
 import { DropDownListAllModule } from '@syncfusion/ej2-angular-dropdowns';
+import { TooltipModule } from '@syncfusion/ej2-angular-popups';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { DropDownListAllModule } from '@syncfusion/ej2-angular-dropdowns';
     HttpClientModule,
     AppRoutingModule,
     GridModule,
-    DropDownListAllModule
+    DropDownListAllModule,
+    TooltipModule
   ],
   providers: [
     ResizeService,

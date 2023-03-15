@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { FilterSettingsModel, GridComponent } from '@syncfusion/ej2-angular-grids';
 import { MessierService } from '../services/messier.service';
 import { DataUtil } from '@syncfusion/ej2-data';
+import { Tooltip } from '@syncfusion/ej2-angular-popups';
 
 @Component({
   selector: 'app-home',
@@ -46,5 +47,13 @@ export class HomeComponent implements OnInit {
 
   openWindow(url: string) {
     window.open(url);
+  }
+
+  headerCellInfo(args: any) { 
+    const toolcontent = args.cell.column.headerText; 
+    const tooltip: Tooltip = new Tooltip({ 
+      content: toolcontent 
+    }); 
+    tooltip.appendTo(args.node); 
   }
 }

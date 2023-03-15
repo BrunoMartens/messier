@@ -3,7 +3,8 @@
         [allowResizing]='true'
         [allowFiltering]='true'
         [filterSettings]='filterOptions'
-        [allowSorting]="true">
+        [allowSorting]="true"
+        (headerCellInfo)='headerCellInfo($event)'>
         <e-columns>
             <e-column headerText="M #" field="id" width="80"></e-column>
             <e-column headerText="Kind" field="messierKind"></e-column>
