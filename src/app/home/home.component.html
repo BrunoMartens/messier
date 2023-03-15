@@ -6,10 +6,7 @@
         [allowSorting]="true">
         <e-columns>
             <e-column headerText="M #" field="id" width="80"></e-column>
-            <!--e-column headerText="NGC" field="ngc" width="100"></e-column-->
             <e-column headerText="Kind" field="messierKind"></e-column>
-            <!--e-column headerText="Type" field="type" width="80"></e-column>
-            <e-column headerText="Distance (ly)" field="distance" width="110"></e-column-->
             <e-column headerText="Size (')" field="size" width="100"></e-column>
             <e-column headerText="Magnitude" field="magnitude" width="110"></e-column>
             <e-column headerText="R.A." width="120">
@@ -24,9 +21,14 @@
             </e-column>
             <e-column headerText="Constellation" field="constellation"></e-column>
             <e-column headerText="Season" field="season" width="110"></e-column>
-            <!--e-column headerText="Discoverer" field="discoverer" width="110"></e-column>
-            <e-column headerText="Year" field="year" width="80"></e-column-->
             <e-column headerText="Remarks" field="remarks" width="150"></e-column>
+            <e-column headerText="Messier Objects" width="80">
+                <ng-template #template let-data>
+                    <div class="msr-centered msr-hover" (click)="openWindow('https://www.messier-objects.com/messier-'+data.id.substring(1))">
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </ng-template>
+            </e-column>
             <e-column headerText="Telrad" width="80">
                 <ng-template #template let-data>
                     <div class="msr-centered msr-hover" (click)="openWindow('https://avila.star-shine.ch/astro/messiercharts/m'+data.id.substring(1).padStart(3,'0')+'.htm')">
